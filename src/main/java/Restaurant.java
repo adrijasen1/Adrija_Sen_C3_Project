@@ -9,7 +9,6 @@ public class Restaurant {
     public LocalTime openingTime;
     public LocalTime closingTime;
     private List<Item> menu = new ArrayList<Item>();
-    private List<Item> cart = new ArrayList<Item>();
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         this.name = name;
@@ -73,19 +72,6 @@ public class Restaurant {
 
     public String getName() {
         return name;
-    }
-
-    public void addToCart(String name, int price) {
-        Item newItemCart = new Item(name, price);
-        cart.add(newItemCart);
-    }
-
-    public int getOrderValue(){
-        int amount = 0;
-        for (Item item : cart) {
-            amount += findItemByName(item.getName()).getPrice();
-        }
-        return amount;
     }
 
 }

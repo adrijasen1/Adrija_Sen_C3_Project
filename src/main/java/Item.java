@@ -7,9 +7,10 @@ public class Item {
         this.price = price;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
+
     @Override
     public String toString(){
         return  name + ":"

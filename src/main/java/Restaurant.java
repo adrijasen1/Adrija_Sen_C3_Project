@@ -88,6 +88,12 @@ public class Restaurant {
         return amount;
     }
 
+    public void searchFromMenu(String itemName) throws itemNotFoundException {
+
+        Item itemToBeSearched = findItemByName(itemName);
+        if (itemToBeSearched == null)
+            throw new itemNotFoundException(itemName);
+    }
 
 
 }

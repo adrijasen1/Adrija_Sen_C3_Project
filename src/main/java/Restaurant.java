@@ -76,23 +76,25 @@ public class Restaurant {
     }
 
     public void addToCart(String name, int price) {
+
         Item newItemCart = new Item(name, price);
         cart.add(newItemCart);
+        
     }
 
     public int getOrderValue(){
-        int amount = 0;
+        int amt = 0;
         for (Item item : cart) {
-            amount += findItemByName(item.getName()).getPrice();
+            amt += findItemByName(item.getName()).getPrice();
         }
-        return amount;
+        return amt;
     }
 
     public void searchFromMenu(String itemName) throws itemNotFoundException {
-
         Item itemToBeSearched = findItemByName(itemName);
         if (itemToBeSearched == null)
             throw new itemNotFoundException(itemName);
+
     }
 
 

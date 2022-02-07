@@ -17,6 +17,7 @@ class ItemTest {
         restaurant.addToMenu("Vegetable lasagne", 269);
     }
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>Order value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     void get_Order_Value() {
 
@@ -24,10 +25,12 @@ class ItemTest {
         int total = restaurant.getOrderValue();
         assertEquals(total, 119);
     }
-
+    //>>>>>>>>>>>>>>>>>>>>>>>>>Order Value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //>>>>>>>>>>>>>>>>>>>>>>>>>fail case<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws itemNotFoundException {
 
         assertThrows(itemNotFoundException.class,()->restaurant.searchFromMenu("cake"));
     }
+    //>>>>>>>>>>>>>>>>>>>>>>>>>fail case<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }

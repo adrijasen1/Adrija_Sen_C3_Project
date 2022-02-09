@@ -87,6 +87,7 @@ public class Restaurant {
         for (Item item : cart) {
             amt += findItemByName(item.getName()).getPrice();
         }
+
         return amt;
     }
 

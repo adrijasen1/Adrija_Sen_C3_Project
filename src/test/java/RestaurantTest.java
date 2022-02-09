@@ -58,5 +58,21 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>>>>Order value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    void get_Order_Value() {
+
+        restaurant.addToCart("Sweet corn soup", 119);
+        int total = restaurant.getOrderValue();
+        assertEquals(total, 119);
+    }
+    //>>>>>>>>>>>>>>>>>>>>>>>>>Order Value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //>>>>>>>>>>>>>>>>>>>>>>>>>fail case<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void searching_for_non_existing_restaurant_should_throw_exception() throws itemNotFoundException {
+
+        assertThrows(itemNotFoundException.class,()->restaurant.searchFromMenu("cake"));
+    }
+    //>>>>>>>>>>>>>>>>>>>>>>>>>fail case<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 }

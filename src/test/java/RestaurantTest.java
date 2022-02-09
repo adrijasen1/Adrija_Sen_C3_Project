@@ -25,6 +25,7 @@ class RestaurantTest {
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     //-------FOR THE 2 TESTS BELOW, YOU MAY USE THE CONCEPT OF MOCKING, IF YOU RUN INTO ANY TROUBLE
+
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time() {
         //WRITE UNIT TEST CASE HERE
@@ -34,7 +35,6 @@ class RestaurantTest {
         Boolean restaurantStatus = restaurant.isRestaurantOpen();
         assertTrue(restaurantStatus);
     }
-
 
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
@@ -71,6 +71,7 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
     //>>>>>>>>>>>>>>>>>>>>>>>>>Order value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     void get_Order_Value() {
@@ -80,6 +81,7 @@ class RestaurantTest {
         assertEquals(total, 119);
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>Order Value<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     //>>>>>>>>>>>>>>>>>>>>>>>>>fail case<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws itemNotFoundException {

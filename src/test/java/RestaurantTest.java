@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RestaurantTest {
     Restaurant restaurant;
     //REFACTOR ALL THE REPEATED LINES OF CODE
+
     @BeforeEach
     public void initEach(){
         //test setup code

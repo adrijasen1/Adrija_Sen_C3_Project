@@ -29,7 +29,7 @@ class RestaurantTest {
         //WRITE UNIT TEST CASE HERE
         restaurant = Mockito.spy(restaurant);
         //Mock getCurrentTime() to 10 minutes before the closingTime
-        Mockito.when(restaurant.getCurrentTime()).thenReturn(restaurant.closingTime.minusMinutes(10));
+        Mockito.when(restaurant.getCurrentTime()).thenReturn(restaurant.closingTime.minusMinutes(30));
         Boolean restaurantStatus = restaurant.isRestaurantOpen();
         assertTrue(restaurantStatus);
     }
@@ -40,7 +40,7 @@ class RestaurantTest {
         //WRITE UNIT TEST CASE HERE
         restaurant = Mockito.spy(restaurant);
         //Mock getCurrentTime() to 10 minutes after the closingTime
-        Mockito.when(restaurant.getCurrentTime()).thenReturn(restaurant.closingTime.plusMinutes(10));
+        Mockito.when(restaurant.getCurrentTime()).thenReturn(restaurant.closingTime.plusMinutes(30));
         Boolean restaurantStatus = restaurant.isRestaurantOpen();
         assertFalse(restaurantStatus);
 
